@@ -1,0 +1,10 @@
+{
+  "name": "builderone",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev -- --hostname 127.0.0.1 --port 3000",
+    "dev:backend": "cd backend && PYTHONPATH=vendor:. python3 -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+    "seed": "cd backend && PYTHONPATH=vendor:. python3 -m scripts.seed",
+    "seed:reset": "cd backend && PYTHONPATH=vendor:. python3 -m scripts.seed --reset"
+  }
+}
